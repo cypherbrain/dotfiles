@@ -12,8 +12,8 @@
             "comments": "#687182"
         }
     },
-    "editor.acceptSuggestionOnEnter": "off"
+    "editor.acceptSuggestionOnEnter": "off",
     "[java]": {
-
+        "editor.tabSize": 2
     }
 }
