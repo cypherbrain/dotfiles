@@ -1,0 +1,19 @@
+{
+    "editor.rulers": [
+        80
+    ],
+    "workbench.colorTheme": "Nord",
+    "window.zoomLevel": 0,
+    "editor.renderIndentGuides": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.tokenColorCustomizations": {
+        "[Nord]": {
+            "comments": "#687182"
+        }
+    },
+    "editor.acceptSuggestionOnEnter": "off"
+    "[java]": {
+
+    }
+}
