@@ -50,8 +50,11 @@
  ;; If there is more than one, they won't work right.
  )
 (setq evil-want-C-u-scroll t)
+(add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+
+(setq ring-bell-function 'ignore)
 
 ;; :q should kill the current buffer rather than quitting emacs entirely
 (evil-ex-define-cmd "q" 'kill-this-buffer)
