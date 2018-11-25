@@ -1,7 +1,3 @@
-execute pathogen#infect()
-
-map <C-n> :NERDTreeToggle<CR>
-
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 inoremap { {<CR>}<Esc>O
@@ -52,3 +48,4 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 colorscheme elflord
+
