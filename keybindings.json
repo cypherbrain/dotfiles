@@ -1,5 +1,10 @@
-// Place your key bindings in this file to overwrite the defaults
+// Place your key bindings in this file to overwrite the defaultsauto[]
 [
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
     {
         "key": "ctrl+x",
         "command": "-extension.vim_ctrl+x",
@@ -16,13 +21,8 @@
         "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
     },
     {
-        "key": "ctrl+h",
-        "command": "-extension.vim_ctrl+h",
-        "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-extension.vim_ctrl+f",
-        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
     }
 ]

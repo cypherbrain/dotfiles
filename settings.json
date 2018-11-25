@@ -1,19 +1,18 @@
 {
-    "editor.rulers": [
-        80
-    ],
-    "workbench.colorTheme": "Nord",
-    "window.zoomLevel": 0,
-    "editor.renderIndentGuides": false,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "editor.tokenColorCustomizations": {
-        "[Nord]": {
-            "comments": "#687182"
-        }
+    "workbench.colorTheme": "Monokai",
+    "window.titleBarStyle": "custom",
+    "workbench.iconTheme": "vscode-icons",
+    "latex-workshop.message.update.show": false,
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [80]
     },
-    "editor.acceptSuggestionOnEnter": "off",
-    "[java]": {
-        "editor.tabSize": 2
+    "[javascriptreact]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [80]
+    },
+    "[markdown]": {
+        "editor.tabSize": 2,
+        "editor.rulers": [80]
     }
 }
