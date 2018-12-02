@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Nord",
     "window.titleBarStyle": "custom",
     "workbench.iconTheme": "vscode-icons",
     "latex-workshop.message.update.show": false,
@@ -14,5 +14,11 @@
     "[markdown]": {
         "editor.tabSize": 2,
         "editor.rulers": [80]
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "explorer.confirmDelete": false,
+    "editor.tokenColorCustomizations": {
+        "comments": "#595f70"
     }
 }
