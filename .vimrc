@@ -1,12 +1,24 @@
+syntax on
+filetype plugin indent on
+set number
+set expandtab
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+colorscheme elflord
+
+" Prevents extending single-line comments to the next line on carriage return
+" in C & C++ files.
+au FileType c,cpp setlocal comments-=:// comments+=f://
+
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap { {<CR>}<Esc>O
+inoremap { <CR>{<CR>}<Esc>O
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
 inoremap } <c-r>=CloseBracket()<CR>
-inoremap " <c-r>=QuoteDelim('"')<CR>
-inoremap ' <c-r>=QuoteDelim("'")<CR>
 
 function ClosePair(char)
  if getline('.')[col('.') - 1] == a:char
@@ -38,14 +50,4 @@ function QuoteDelim(char)
  return a:char.a:char."\<Esc>i"
  endif
 endf
-
-syntax on
-filetype plugin indent on
-set expandtab
-set smartindent
-set number
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-colorscheme elflord
 
