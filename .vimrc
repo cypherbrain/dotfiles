@@ -6,10 +6,13 @@ filetype plugin indent on
 set number
 set expandtab
 set smartindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set termguicolors
+set background=dark
+
+colorscheme Tomorrow-Night-Bright
 
 " Configure backspace so it acts like it should
 set backspace=eol,start,indent
@@ -24,6 +27,9 @@ autocmd GUIEnter * set vb t_vb=
 
 " Enable 256 color palatte in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+if $COLORTERM == 'truecolor'
     set t_Co=256
 endif
 
@@ -43,7 +49,7 @@ set noswapfile
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap { <CR>{<CR>}<Esc>O
+inoremap { {<CR>}<Esc>O
 autocmd Syntax html,vim inoremap < <lt>><Esc>i| inoremap > <c-r>=ClosePair('>')<CR>
 inoremap ) <c-r>=ClosePair(')')<CR>
 inoremap ] <c-r>=ClosePair(']')<CR>
