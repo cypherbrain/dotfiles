@@ -6,22 +6,23 @@ filetype plugin indent on
 set number
 set expandtab
 set smartindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set termguicolors
 set background=dark
 
 if has("gui_running")
   autocmd GUIEnter * simalt ~x
-  set guifont=Ubuntu\ Mono:h10
+  set guifont=Ubuntu\ Mono\ Regular\ 12
   set guioptions -=T "remove toolbar
   set guioptions -=r "remove right-hand scroll bar
   set guioptions -=L "remove left-hand scroll bar
   set lines=999 columns=999
 endif
 
-colorscheme base16-gruvbox-dark-soft
+" Terminal colorscheme is "Argonaut"
+colorscheme iceberg
 
 " Configure backspace so it acts like it should
 set backspace=eol,start,indent
