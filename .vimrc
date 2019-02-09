@@ -12,7 +12,16 @@ set shiftwidth=2
 set termguicolors
 set background=dark
 
-colorscheme Tomorrow-Night-Bright
+if has("gui_running")
+  autocmd GUIEnter * simalt ~x
+  set guifont=Ubuntu\ Mono:h10
+  set guioptions -=T "remove toolbar
+  set guioptions -=r "remove right-hand scroll bar
+  set guioptions -=L "remove left-hand scroll bar
+  set lines=999 columns=999
+endif
+
+colorscheme base16-gruvbox-dark-soft
 
 " Configure backspace so it acts like it should
 set backspace=eol,start,indent
