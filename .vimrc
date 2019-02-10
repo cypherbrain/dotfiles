@@ -13,7 +13,6 @@ set termguicolors
 set background=dark
 
 if has("gui_running")
-  autocmd GUIEnter * simalt ~x
   set guifont=Ubuntu\ Mono\ Regular\ 12
   set guioptions -=T "remove toolbar
   set guioptions -=r "remove right-hand scroll bar
