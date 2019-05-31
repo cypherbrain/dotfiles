@@ -11,6 +11,8 @@ set softtabstop=4
 set shiftwidth=4
 set termguicolors
 
+colorscheme nord
+
 " Configure backspace so it acts like it should
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -26,6 +28,8 @@ autocmd GUIEnter * set vb t_vb=
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+set guifont=Ubuntu\ Mono\ 16
 
 " Set utf8 as the standard encoding and en_US as the standard language
 set encoding=utf8
