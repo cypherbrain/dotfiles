@@ -9,8 +9,8 @@ set smartindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set termguicolors
 
+set termguicolors
 colorscheme nord
 
 " Configure backspace so it acts like it should
@@ -23,11 +23,6 @@ au FileType c,cpp setlocal comments-=:// comments+=f://
 
 " Turning off the bell in GVim
 autocmd GUIEnter * set vb t_vb=
-
-" Enable 256 color palatte in Gnome Terminal
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
 
 set guifont=Ubuntu\ Mono\ 16
 
