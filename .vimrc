@@ -2,13 +2,13 @@ set nocompatible              " be iMproved, required
 set number
 set expandtab
 set smartindent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set termguicolors
 set t_Co=256
 set colorcolumn=80
-colorscheme solarized8
+colorscheme nord
 
 filetype off                  " required
 syntax on
