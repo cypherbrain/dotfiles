@@ -2,13 +2,13 @@ set nocompatible              " be iMproved, required
 set number
 set expandtab
 set smartindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set termguicolors
 set t_Co=256
 set colorcolumn=80
-colorscheme nord
+colorscheme Tomorrow-Night-Bright
 
 filetype off                  " required
 syntax on
@@ -22,7 +22,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 
 " All of your Plugins must be added before the following line
