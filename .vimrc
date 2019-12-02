@@ -22,7 +22,9 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+Plugin 'Valloric/YouCompleteMe.git'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +65,13 @@ set encoding=utf8
 
 " Set Unix as the standard file type
 set ffs=unix,dos,mac
+
+map <C-n> :NERDTreeToggle<CR>
+
+" YouCompleteMe stuff
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+set completeopt-=preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
