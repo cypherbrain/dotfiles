@@ -7,8 +7,8 @@ set softtabstop=4
 set shiftwidth=4
 set termguicolors
 set t_Co=256
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 set colorcolumn=80
-colorscheme Tomorrow-Night-Bright
 
 filetype off                  " required
 syntax on
@@ -22,9 +22,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'fatih/vim-go'
 Plugin 'vim-airline/vim-airline'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,6 +49,9 @@ set whichwrap+=<,>,h,l
 " Prevents extending single-line comments to the next line on carriage return
 " in C/C++ files.
 au FileType c,cpp setlocal comments-=:// comments+=f://
+
+" JavaScript file size
+au FileType javascript,typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Turning off the bell in GVim
 autocmd GUIEnter * set vb t_vb=
@@ -81,3 +85,4 @@ set nobackup
 set nowb
 set noswapfile
 
+colorscheme nord
