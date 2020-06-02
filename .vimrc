@@ -6,6 +6,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set termguicolors
+set background=dark
 set t_Co=256
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set colorcolumn=80
@@ -24,8 +25,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'vim-airline/vim-airline'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,4 +86,16 @@ set nobackup
 set nowb
 set noswapfile
 
-colorscheme nord
+colorscheme solarized8
+
+" turn hybrid line numbers on
+set number relativenumber
+
+" Enable true color
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+
+
