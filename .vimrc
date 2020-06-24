@@ -27,6 +27,7 @@ Plugin 'fatih/vim-go'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'morhetz/gruvbox.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,7 +87,7 @@ set nobackup
 set nowb
 set noswapfile
 
-colorscheme solarized8
+colorscheme gruvbox
 
 " turn hybrid line numbers on
 set number relativenumber

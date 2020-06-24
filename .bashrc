@@ -120,7 +120,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
+
+setxkbmap -option 'ctrl:nocaps'
+xrandr --output DVI-D-0 --mode 1920x1080 --rate 144.00
 
