@@ -5,14 +5,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'fatih/vim-go'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'Shougo/deoplete.nvim'
-"Plugin 'deoplete-plugins/deoplete-go'
-"Plugin 'deoplete-plugins/deoplete-jedi'
-"Plugin 'carlitux/deoplete-ternjs'
-Plugin 'zchee/deoplete-clang'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -25,27 +20,27 @@ set smartindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set splitright
 syntax on
 
 " Color
 set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-set colorcolumn=80
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"set colorcolumn=80
 
-" JavaScript file size
+augroup SyntaxSettings
+    autocmd!
+    autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
+
+" JavaScript tab size
 au FileType javascript,typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+
+" HTML tab size
+au FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 " Set utf8 as the standard encoding and en_US as the standard language
 set encoding=utf8
-
-" Deoplete stuff
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#go#gocode_binary = "~/go/bin/gocode"
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
-"" <TAB>: completion
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-"" Hide preview window after completion
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -58,3 +53,26 @@ set number relativenumber
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
 
+" Prettier
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
