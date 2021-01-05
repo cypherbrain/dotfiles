@@ -92,6 +92,7 @@ unset use_color safe_term match_lhs sh
 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
+alias ll='ls -alF'
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
@@ -138,7 +139,5 @@ ex ()
   fi
 }
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/fires/clion-2020.3.1/bin
 setxkbmap -option caps:escape
-alias ll='ls -alF'
-
