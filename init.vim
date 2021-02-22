@@ -3,10 +3,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'cocopon/iceberg.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'tmhedberg/matchit'
+Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'alvan/vim-closetag'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 
@@ -42,7 +49,7 @@ let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
 " C/C++
-au FileType c,cpp setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+au FileType c,cpp setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 
 " JavaScript/TypeScript
 au FileType javascript,javascript.jsx,typescript,typescript.tsx setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
@@ -56,3 +63,5 @@ au FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 " Mappings
 map <C-n> :NERDTreeToggle<CR>
 
+" vim-closetag
+let g:closetag_filenames = '*.html,*.jsx,*.tsx'
