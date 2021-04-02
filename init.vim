@@ -7,6 +7,8 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'cocopon/iceberg.vim'
+Plugin 'sainnhe/everforest'
+Plugin 'machakann/vim-colorscheme-tatami'
 Plugin 'mattn/emmet-vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'MaxMEllon/vim-jsx-pretty'
@@ -33,7 +35,9 @@ set formatoptions+=r
 filetype plugin indent on
 syntax on
 
-color iceberg
+" color iceberg
+color everforest
+set background=light
 
 augroup SyntaxSettings
     autocmd!
@@ -43,10 +47,13 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END
 
+" Python
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
 " Go
 let g:go_fmt_command = "goimports"
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+let g:go_def_mode="gopls"
+let g:go_info_mode="gopls"
 
 " C/C++
 au FileType c,cpp setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
