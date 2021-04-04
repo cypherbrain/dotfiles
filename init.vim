@@ -35,9 +35,10 @@ set formatoptions+=r
 filetype plugin indent on
 syntax on
 
-" color iceberg
-color everforest
+" Colorscheme
 set background=light
+let g:everforest_background='soft'
+color everforest
 
 augroup SyntaxSettings
     autocmd!
