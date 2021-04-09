@@ -140,4 +140,4 @@ ex ()
 }
 
 export PATH=$PATH:/home/fires/clion-2020.3.1/bin
-setxkbmap -option caps:escape
+setxkbmap -option ctrl:nocaps

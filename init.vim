@@ -8,13 +8,16 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'sainnhe/everforest'
+Plugin 'sjl/badwolf'
 Plugin 'machakann/vim-colorscheme-tatami'
 Plugin 'mattn/emmet-vim'
 Plugin 'tmhedberg/matchit'
 Plugin 'MaxMEllon/vim-jsx-pretty'
+Plugin 'tmsvg/pear-tree'
 Plugin 'alvan/vim-closetag'
-Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'fatih/vim-go'
 
 call vundle#end()
@@ -36,9 +39,7 @@ filetype plugin indent on
 syntax on
 
 " Colorscheme
-set background=light
-let g:everforest_background='soft'
-color everforest
+color badwolf
 
 augroup SyntaxSettings
     autocmd!
@@ -47,6 +48,11 @@ augroup SyntaxSettings
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
     autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
 augroup END
+
+" Pear-tree
+let g:pear_tree_smart_openers   = 1
+let g:pear_tree_smart_closers   = 1
+let g:pear_tree_smart_backspace = 1
 
 " Python
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
