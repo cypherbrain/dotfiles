@@ -139,5 +139,15 @@ ex ()
   fi
 }
 
+# ssh-agent
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
+
+# Paths
 export PATH=$PATH:/home/fires/clion-2020.3.1/bin
+export PATH=$PATH:/opt/Postman/app
 setxkbmap -option ctrl:nocaps
