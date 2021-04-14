@@ -150,4 +150,5 @@ ssh-add -l > /dev/null || ssh-add
 # Paths
 export PATH=$PATH:/home/fires/clion-2020.3.1/bin
 export PATH=$PATH:/opt/Postman/app
+export PATH=$PATH:/usr/local/go/bin
 setxkbmap -option ctrl:nocaps
