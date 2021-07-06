@@ -1,25 +1,25 @@
+filetype off
+
 " Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'cocopon/iceberg.vim'
-Plugin 'sainnhe/everforest'
-Plugin 'sjl/badwolf'
-Plugin 'mattn/emmet-vim'
-Plugin 'tmhedberg/matchit'
-Plugin 'MaxMEllon/vim-jsx-pretty'
-Plugin 'tmsvg/pear-tree'
-Plugin 'alvan/vim-closetag'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'fatih/vim-go'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'mattn/emmet-vim'
+Plug 'tmhedberg/matchit'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'tmsvg/pear-tree'
+Plug 'alvan/vim-closetag'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go'
+Plug 'vimwiki/vimwiki'
+Plug 'jnurmine/Zenburn'
+Plug 'SirVer/ultisnips'
 
-call vundle#end()
+call plug#end()
 
 set number relativenumber
 set expandtab
@@ -38,7 +38,7 @@ filetype plugin indent on
 syntax on
 
 " Colorscheme
-color badwolf
+color zenburn
 
 augroup SyntaxSettings
     autocmd!
@@ -55,6 +55,15 @@ let g:pear_tree_smart_backspace = 1
 
 " Python
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.config/nvim/UltiSnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:vimwiki_table_mappings=0
 
 " Go
 let g:go_fmt_command = "goimports"
@@ -78,3 +87,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " vim-closetag
 let g:closetag_filenames = '*.html,*.jsx,*.tsx'
+
+
+set rtp^=$HOME

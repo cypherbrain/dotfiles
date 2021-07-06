@@ -140,15 +140,13 @@ ex ()
 }
 
 # ssh-agent
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-  eval `ssh-agent`
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add
+# if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+#   eval `ssh-agent`
+#   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+# fi
+# export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+# ssh-add -l > /dev/null || ssh-add
 
 # Paths
-export PATH=$PATH:/home/fires/clion-2020.3.1/bin
-export PATH=$PATH:/opt/Postman/app
-export PATH=$PATH:/usr/local/go/bin
 setxkbmap -option ctrl:nocaps
+export PATH=$PATH:/usr/local/go/bin
