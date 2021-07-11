@@ -9,7 +9,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'mattn/emmet-vim'
 Plug 'tmhedberg/matchit'
 Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'tmsvg/pear-tree'
 Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -18,6 +17,7 @@ Plug 'fatih/vim-go'
 Plug 'vimwiki/vimwiki'
 Plug 'jnurmine/Zenburn'
 Plug 'SirVer/ultisnips'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 

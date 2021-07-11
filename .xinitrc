@@ -63,8 +63,8 @@ get_session(){
 	echo "dbus-launch ${dbus_args[*]}"
 }
 
-exec $(get_session "$1")
-
 xrandr --output HDMI-1 --rotate right
 xrandr --output HDMI-1 --left-of DVI-D-0
 xrandr --output DVI-D-0 --pos 1080x480
+
+exec $(get_session "$1")
